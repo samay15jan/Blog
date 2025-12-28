@@ -1,0 +1,153 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+
+{{/* =============================
+COLLECT + SORT YEARS
+============================= */}}
+{{- $years := slice }}
+{{- range $k, $_ := .Site.Data.timeline }}
+{{- $years = $years | append $k }}
+{{- end }}
+
+{{- $years = sort $years }} {{/* ascending */}}
+
+{{/* build descending manually (works in old Hugo too) */}}
+{{- $yearsDesc := slice }}
+{{- range $years }}
+{{- $yearsDesc = (slice .) | append $yearsDesc }}
+{{- end }}
+
+
+{{/* =============================
+RENDER TIMELINE
+============================= */}}
+{{- range $yearsDesc }}
+{{- $year := . }}
+{{- $months := index $.Site.Data.timeline $year }}
+
+<div class="archive-year">
+  <h2 class="archive-year-header">
+    {{- $year }}<sup class="archive-count">&nbsp;&nbsp;{{ len $months }}</sup>
+  </h2>
+
+  {{- range $month, $items := $months }}
+  <div class="archive-month">
+    <h3 class="archive-month-header">
+      {{- $month }}<sup class="archive-count">&nbsp;&nbsp;{{ len $items }}</sup>
+    </h3>
+
+    <div class="archive-posts">
+
+      {{- range $items }}
+      <div class="archive-entry">
+
+        <h3 class="archive-entry-title">
+          <b>{{- .title }}</b>
+          {{- with .status }}
+          {{- end }}
+        </h3>
+
+        <div class="archive-meta">
+          {{- with .desc }}{{ . }}{{ end }}
+        </div>
+
+        {{/* BELOW CONTENT (nice extra info block) */}}
+        <div style="margin-top:6px; font-size:0.9em">
+
+          {{- if or .links .tech .features .reason .challenges .status .subprojects }}
+          <details style="margin-top:6px">
+            <summary>More</summary>
+
+            {{- if .links }}
+            <div>
+              {{- range .links }}
+              <a href="{{ .url }}"><u><b>{{ .label }}</b></u></a>&nbsp;&nbsp;
+              {{- end }}
+            </div>
+            {{- end }}
+
+            {{- with .tech }}
+            <p>Tech Stack:</p>
+            <ul class="archive-meta">
+              {{- range $k, $v := . }}
+              <li>{{ $k }}: {{ $v }}</li>
+              {{- end }}
+            </ul>
+            {{- end }}
+
+            {{- with .features }}
+            <p>Features:</p>
+            <ul class="archive-meta">
+              {{- range . }}
+              <li>{{ . }}</li>
+              {{- end }}
+            </ul>
+            {{- end }}
+
+            {{- with .subprojects }}
+            <p>Sub-Projects:</p>
+            {{- range . }}
+            <p>{{ .date }}</p>
+            <ul class="archive-meta">
+              {{- range .items }}
+              <li>{{ . }}</li>
+              {{- end }}
+              {{- with .links }}
+              <p>
+                {{- range . }}
+                <a class="archive-meta" href="{{ .url }}"><u><b>{{ .label }}</u></b></a>&nbsp;&nbsp;
+                {{- end }}
+              </p>
+              {{- end }}
+
+            </ul>
+            {{- end }}
+            {{- end }}
+
+            {{- with .reason }}
+            <p>Reason I started:</p>
+            <ul class="archive-meta">
+              {{- range . }}
+              <li>{{ . }}</li>
+              {{- end }}
+            </ul>
+            {{- end }}
+
+            {{- with .challenges }}
+            <p>Challenges:</p>
+            <ul class="archive-meta">
+              {{- range . }}
+              <li>{{ . }}</li>
+              {{- end }}
+            </ul>
+            {{- end }}
+
+            {{- if .status }}
+            <div>
+              Status: {{ .status }}
+            </div>
+            {{- end }}
+
+          </details>
+          {{- end }}
+        </div>
+
+      </div>
+      {{- end }}
+
+    </div>
+  </div>
+  {{- end }}
+
+</div>
+{{- end }}
+
+{{- end }}{{/* end main */}}

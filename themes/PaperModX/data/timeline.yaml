@@ -1,0 +1,286 @@
+2025:
+  Jan:
+    - title: Firebase Email Handler
+      timeline: Jan 2025
+      desc: A self-hostable Node.js service to handle Firebase email verification and password reset flows.
+      links:
+        - label: Github
+          url: https://github.com/samay15jan/firebase-email-handler
+        - label: Demo
+          url: https://firebase-email-handler.onrender.com
+      tech:
+        Backend: Node.js, Express.js
+        Email: Firebase Auth
+        Deploy: Docker, Render
+      features:
+        - Automated Firebase email workflows
+        - Custom minimal HTML UI pages
+        - Dockerized deploy
+        - Reusable microservice API
+      reason:
+        - Wanted a plug-and-play Firebase email handler
+        - Learn Docker + production Express.js
+      challenges:
+        - Understanding emai3l workflows
+        - Firebase redirect handling
+        - Making it fully self-hostable
+      status: Achieved
+
+  General:
+    - title: ThoughtScape Reimagined
+    - title: Bought a domain name
+    - title: Updated Workflow
+    - title: AWS + Cloud computing shift
+    - title: Sparklines Mobile
+    - title: Altux
+    - title: Cyberdeck
+      desc: Hardware tinkering & DIY cyberdeck exploration
+    - title: Old set top boxes hacking
+      desc: Failed attempt using USB to TTL adapter
+    - title: Sparklines-backend docs build
+    - title: intervals grub theme
+    - title: jugaad hub
+    - title: blogs
+    - title: Rebuild portfolio/blogging site
+
+2024:
+  General:
+    - title: Portfolio Site
+    - title: Sparklines Web
+    - title: Obsidian vault sync
+    - title: PrivateGPT
+    - title: Nextflix
+    - title: Bingelord Mobile
+    - title: AuthZ
+    - title: Sparklines TUI
+    - title: Blogging Site
+
+2023:
+  General:
+    - title: HeimOS
+    - title: Homepage
+    - title: Storage-Box
+    - title: ChatGPT Assistant
+    - title: Backend Playground
+
+  Jun:
+    - title: Thoughtscape
+      timeline: Jun 2023 – July 2023
+      status: Archived
+      desc: A private online journaling web application with AI replies, VR lounge, chatbox, and secure synced journaling.
+
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/thoughtscape
+        - label: Demo
+          url: https://thoughtscape.samay15jan.xyz
+
+      tech:
+        Frontend: HTML, CSS, JavaScript, Tailwind CSS, IndexedDB (idb)
+        AI: Cloudflare AI Workers
+        Firebase: Hosting, Authentication, Firestore (secure storage), Realtime DB (non-sensitive)
+        VR: Matterport 360° + VR lounge
+        ChatBox: Cbox realtime chat
+        Email: Elastic Mail
+
+      features:
+        - Secure user authentication
+        - Private journal entry creation + cloud storage
+        - AI-generated responses to journal entries
+        - 360° VR lounge experience via Matterport
+        - Community chat via Cbox
+        - Book recommendations
+        - User settings + journal stats
+        - PWA offline support
+        - Help & support query system
+
+      reason:
+        - Wanted to learn full-stack web dev via real project work
+        - Inspired by AI hype and wanted AI features
+        - Personal motivation to start journaling with private cloud sync
+
+      challenges:
+        - Learning JavaScript fundamentals (used Javascript.info)
+        - Full Firebase workflow (auth + Firestore + Realtime DB)
+        - Implementing PWA offline support + IndexedDB
+        - Migrating AI from ChatGPT API to Cloudflare Workers
+        - Understanding project management & timelines
+        - Encryption tradeoffs — client-side encryption using Firebase UID wasn’t ideal; should have used backend/KMS but outside project scope
+
+  Aug:
+    - title: Quantum Quest
+      timeline: Aug 2023 – Sept 2023
+      status: Archived
+      desc: A realtime task tracker built to learn React and strengthen JavaScript fundamentals.
+
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/quantum-quest
+        - label: Demo
+          url: https://quest.samay15jan.xyz
+
+      tech:
+        frontend: React, Tailwind CSS
+        backend: Firebase Realtime Database
+        authentication: Firebase Auth (Google Sign-In)
+        hosting: Firebase Hosting
+
+      features:
+        - Google Sign-In authentication
+        - Real-time task management (add / edit / delete instantly)
+        - Dark mode support
+        - Progress tracking
+        - PWA support
+
+      reason:
+        - Learn React while strengthening JavaScript concepts
+        - Started with a short tutorial from Javascript Mastery then extended independently
+        - Still basically a todo app — and that's fine.
+
+      challenges:
+        - Understanding React hooks like useState & useEffect initially
+        - Handling Firebase realtime sync + authentication simultaneously
+
+  Nov:
+    - title: Bingelord
+      timeline: Nov 2023 – Dec 2023
+      status: Archived
+      desc: A movie & series browsing and streaming platform with search, streaming, user auth, and watchlist support.
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/bingelord
+        - label: Demo
+          url: https://bingelord.samay15jan.xyz
+        - label: Docs
+          url: https://docs.bingelord.samay15jan.xyz
+      tech:
+        Frontend: React, TailwindCSS, React Router, styled-components, twin.macro, Lenis, Vite, ColorThief, Axios
+        Backend: Node.js, Express, Firebase
+        Hosting: Render + cron job (backend keep-alive)
+        Documentation: ReType
+      features:
+        - Uses TMDB API for movie + series data
+        - Streaming powered by Vidsrc
+        - Real-time search with filtering
+        - Detailed media pages with trailers, images, ratings, and cast
+        - Watchlist powered by Firebase Realtime DB
+        - Firebase authentication
+        - Fully responsive UI
+      subprojects:
+        - date: Feb 2025
+          items:
+            - API Documentation written using Retype
+            - Updated modern landing page
+          links:
+            - label: Demo
+            - url: https://docs.samay15jan.xyz
+        - date: Sept 2024
+          items:
+            - Nextflix Mobile (React Native minimal app)
+          links:
+            - label: Github
+            - url: https://github.com/samay15jan/Nextflix/
+        - date: Sept 2024 – Paused
+          items:
+            - Bingelord Mobile — full mobile app (under construction)
+          links:
+            - label: Github
+            - url: https://github.com/samay15jan/BingeLord-Mobile
+        - date: August 2024
+          items:
+            - Nextflix CLI — minimal CLI version
+          links:
+            - label: Docs
+            - url: https://docs.bingelord.samay15jan.xyz/extended-version/nextflix-cli/
+      reason:
+        - Work with a large external API (TMDB)
+        - Build a large React project fast to improve speed + proficiency
+        - Personal need for a better self-made streaming platform
+      challenges:
+        - Learning deep React Router navigation + params
+        - Building an Express proxy server for TMDB and wiring with Vite
+        - Performance tuning using axios-retry, lazy loading, code splitting
+        - Limited hardware pushed learning Expo + EAS builds via Google IDX
+        - Mobile popup/redirect ads led to exploring request blocking and Ghostry style handling
+
+  Sept:
+    - title: Porsche Replicant
+      timeline: Sep 2023 – Nov 2023
+      status: Archived
+      desc: A high-fidelity replica of Porsche’s official web platform with landing, model search, configuration, and comparison — built to master modern React + Redux engineering.
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/porsche-replicant
+        - label: Demo
+          url: https://porsche-replicant.web.app
+        - label: Video Walkthrough
+          url: https://youtu.be/722MIdHF72I?feature=shared
+      tech:
+        frontend: React, Redux, Tailwind CSS, twin.macro, styled-components, React Router
+        media: HLS.js video streaming
+        deployment: Firebase Hosting + Cloudflare DNS
+      features:
+        - Landing Page with immersive Porsche-style interface and HLS video integration
+        - Model Filtering by model, style, transmission, engine, seating
+        - Configuration Page:
+          - Dynamic preview with real-time color changes
+          - Customizable wheels, interior, tech, and performance
+          - Realtime base + total price updates
+        - Comparison Tool:
+          - Side-by-side model comparison
+          - Color + feature toggles
+          - Exhaust sound previews
+          - One-click configure from comparison view
+        - Fully responsive and mobile optimized
+      reason:
+        - Deep dive into React + Redux through a visually complex and data-heavy project
+        - Practice clean UI + real-world architecture thinking
+        - Personal challenge to manage complex UI state flows
+      challenges:
+        - Started with limited React + Redux experience
+        - Large manual dataset creation for models, assets, and structured JSON
+        - Highly complex state management
+        - Polishing responsive UX at scale
+2022:
+  General:
+    - title: Home server setups & Docker
+    - title: Bash & i3wm customization
+    - title: Linux confidence
+      desc: Arch Linux became home
+    - title: Tough emotional year
+      desc: School + social chaos
+    - title: Mining
+    - title: Basic personal website
+    - title: CPU crypto mining experiments
+
+2021:
+  General:
+    - title: Deep Linux Customization
+      desc: Switched to Arch Linux
+    - title: Broke + Fixed System Many Times
+    - title: Bootable USB always ready
+    - title: Theming & GRUB fixing
+    - title: First Home Server Setup
+    - title: Self Hosting Tools
+      desc: Docker, PiHole, Jellyfin, Portainer, Yacht
+
+2020:
+  General:
+    - title: Bought laptop
+      desc: March 2020
+    - title: Amahi Server
+      desc: June–July
+    - title: Dual booting journey
+      desc: PopOS, Linux Mint, distro hopping
+    - title: Inspired by NetworkChuck
+    - title: Hackintosh attempt
+      desc: Late 2020 winters
+    - title: Learned terminal + TUIs
+
+Before 2020:
+  General:
+    - title: Rainmeter Customization
+    - title: Windows tinkering
+    - title: Casual gaming
+    - title: Wakeup greeting batch script
+    - title: Random experiments

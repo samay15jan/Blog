@@ -77,12 +77,16 @@ EnableInstantClick = true
   url = "https://github.com/samay15jan"
 
   [[params.socialIcons]]
-  name = "youtube"
-  url = "https://youtube.com/@samay15jan"
+  name = "linkedin"
+  url = "https://linkedin.com/samay15jan"
 
   [[params.socialIcons]]
-  name = "twitter"
-  url = "https://x.com/samay15jan"
+  name = "email"
+  url = "https://mail.google.com/mail/u/0/?fs=1&to=samay15jan@gmail.com&su=Hey+Samay!&tf=cm"
+
+  [[params.socialIcons]]
+  name = "link"
+  url = "https://samay15jan.xyz"
 
 [params.analytics.google]
 SiteVerificationTag = "w47jE9EDmtXIjTlcL6Oex8TU0hEQaHvH70RLUb6b3qQ"
@@ -114,8 +118,8 @@ SiteVerificationTag = "XYZabc"
 
 [[menu.main]]
 identifier = "projects"
-name = "Projects"
-url = "/projects/"
+name = "Timeline"
+url = "/timeline/"
 weight = 10
 
 [[menu.main]]
