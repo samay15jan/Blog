@@ -55,16 +55,16 @@ RENDER TIMELINE
           {{- end }}
         </h3>
 
-        <div class="archive-meta">
-          {{- with .desc }}{{ . }}{{ end }}
-        </div>
 
         {{/* BELOW CONTENT (nice extra info block) */}}
         <div style="margin-top:6px; font-size:0.9em">
 
-          {{- if or .links .tech .features .reason .challenges .status .subprojects }}
+          {{- if or .links .tech .features .reason .challenges .status .subprojects .backstory }}
           <details style="margin-top:6px">
             <summary>More</summary>
+            <div class="archive-meta">
+              {{- with .desc }}{{ . }}{{ end }}
+            </div>
 
             {{- if .links }}
             <div>
@@ -133,6 +133,12 @@ RENDER TIMELINE
             {{- if .status }}
             <div>
               Status: {{ .status }}
+            </div>
+            {{- end }}
+
+            {{- if .backstory }}
+            <div class="archive-meta">
+              <strong>Backstory</strong>: {{ .backstory }}
             </div>
             {{- end }}
 

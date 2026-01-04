@@ -31,8 +31,8 @@
     - title: Bought a domain name
     - title: Updated Workflow
     - title: AWS + Cloud computing shift
+    - title: Updating every project and finalizing them all (with readme)...bingelord webpage
     - title: Sparklines Mobile
-    - title: Altux
     - title: Cyberdeck
       desc: Hardware tinkering & DIY cyberdeck exploration
     - title: Old set top boxes hacking
@@ -42,105 +42,60 @@
     - title: jugaad hub
     - title: blogs
     - title: Rebuild portfolio/blogging site
+    - title: Build Timeline
+
+  Jun:
+    - title: Altux
+      timeline: Jan 2025 – Feb 2025
+      status: Archived
+      desc: A proof-of-concept setup that builds unsigned iOS .ipa files for Expo/React Native apps using GitHub Actions without requiring Mac or paid Apple Developer account. 
+
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/altux
+        - label: Blog
+          url: http://blog.samay15jan.xyz/posts/getting-started-with-linux-copy/
+
+      tech:
+        Mobile: React Native, Expo
+        CI/CD: GitHub Actions (macOS runners), xcodebuild
+        Sideloading: AltStore, TrollStore, SideStore
+        Tools: AltServer-Linux, anisette server, Docker, usbmuxd, libimobiledevice
+
+      features:
+        - Build unsigned .ipa files using GitHub Actions
+        - No Mac required, no paid Apple Developer account
+        - Supports sideloading on iPhones using AltStore / TrollStore / SideStore
+        - Debug builds by default with option to switch to Release
+        - Artifacts downloadable directly from GitHub Actions
+        - Works as a reusable template for any Expo project
+
+      reason:
+        - Wanted to prove iOS apps can be built without Apple’s paywall
+        - Help students, hobbyists, and indie devs test on real devices
+        - Explore CI-powered iOS builds using GitHub Actions
+        - Personal curiosity & experimentation with sideloading workflows
+
+      challenges:
+        - Handling unsigned builds and iOS signing limitations
+        - Dependency stability — Expo updates often break builds
+        - Long macOS runner build times and limited free GitHub credits
+        - Ensuring compatibility across sideloading tools
+        - Security considerations — need disposable Apple IDs
+        - Not suitable for production or distribution; strictly educational
 
 2024:
   General:
-    - title: Portfolio Site
-    - title: Sparklines Web
-    - title: Obsidian vault sync
-    - title: PrivateGPT
-    - title: Nextflix
-    - title: Bingelord Mobile
-    - title: AuthZ
-    - title: Sparklines TUI
     - title: Blogging Site
-
+    - title: Sparklines TUI
+    - title: AuthZ
+    - title: Bingelord Mobile
+    - title: Nextflix
+    - title: PrivateGPT
+    - title: Obsidian vault sync
+    - title: Sparklines Web
+    - title: Portfolio Site
 2023:
-  General:
-    - title: HeimOS
-    - title: Homepage
-    - title: Storage-Box
-    - title: ChatGPT Assistant
-    - title: Backend Playground
-
-  Jun:
-    - title: Thoughtscape
-      timeline: Jun 2023 – July 2023
-      status: Archived
-      desc: A private online journaling web application with AI replies, VR lounge, chatbox, and secure synced journaling.
-
-      links:
-        - label: GitHub
-          url: https://github.com/samay15jan/thoughtscape
-        - label: Demo
-          url: https://thoughtscape.samay15jan.xyz
-
-      tech:
-        Frontend: HTML, CSS, JavaScript, Tailwind CSS, IndexedDB (idb)
-        AI: Cloudflare AI Workers
-        Firebase: Hosting, Authentication, Firestore (secure storage), Realtime DB (non-sensitive)
-        VR: Matterport 360° + VR lounge
-        ChatBox: Cbox realtime chat
-        Email: Elastic Mail
-
-      features:
-        - Secure user authentication
-        - Private journal entry creation + cloud storage
-        - AI-generated responses to journal entries
-        - 360° VR lounge experience via Matterport
-        - Community chat via Cbox
-        - Book recommendations
-        - User settings + journal stats
-        - PWA offline support
-        - Help & support query system
-
-      reason:
-        - Wanted to learn full-stack web dev via real project work
-        - Inspired by AI hype and wanted AI features
-        - Personal motivation to start journaling with private cloud sync
-
-      challenges:
-        - Learning JavaScript fundamentals (used Javascript.info)
-        - Full Firebase workflow (auth + Firestore + Realtime DB)
-        - Implementing PWA offline support + IndexedDB
-        - Migrating AI from ChatGPT API to Cloudflare Workers
-        - Understanding project management & timelines
-        - Encryption tradeoffs — client-side encryption using Firebase UID wasn’t ideal; should have used backend/KMS but outside project scope
-
-  Aug:
-    - title: Quantum Quest
-      timeline: Aug 2023 – Sept 2023
-      status: Archived
-      desc: A realtime task tracker built to learn React and strengthen JavaScript fundamentals.
-
-      links:
-        - label: GitHub
-          url: https://github.com/samay15jan/quantum-quest
-        - label: Demo
-          url: https://quest.samay15jan.xyz
-
-      tech:
-        frontend: React, Tailwind CSS
-        backend: Firebase Realtime Database
-        authentication: Firebase Auth (Google Sign-In)
-        hosting: Firebase Hosting
-
-      features:
-        - Google Sign-In authentication
-        - Real-time task management (add / edit / delete instantly)
-        - Dark mode support
-        - Progress tracking
-        - PWA support
-
-      reason:
-        - Learn React while strengthening JavaScript concepts
-        - Started with a short tutorial from Javascript Mastery then extended independently
-        - Still basically a todo app — and that's fine.
-
-      challenges:
-        - Understanding React hooks like useState & useEffect initially
-        - Handling Firebase realtime sync + authentication simultaneously
-
   Nov:
     - title: Bingelord
       timeline: Nov 2023 – Dec 2023
@@ -202,7 +157,9 @@
         - Performance tuning using axios-retry, lazy loading, code splitting
         - Limited hardware pushed learning Expo + EAS builds via Google IDX
         - Mobile popup/redirect ads led to exploring request blocking and Ghostry style handling
-
+  Oct:  
+    - title: Backend Playground
+      backstory:
   Sept:
     - title: Porsche Replicant
       timeline: Sep 2023 – Nov 2023
@@ -241,46 +198,179 @@
         - Large manual dataset creation for models, assets, and structured JSON
         - Highly complex state management
         - Polishing responsive UX at scale
+  Aug:
+    - title: Quantum Quest
+      timeline: Aug 2023 – Sept 2023
+      status: Archived
+      desc: A realtime task tracker built to learn React and strengthen JavaScript fundamentals.
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/quantum-quest
+        - label: Demo
+          url: https://quest.samay15jan.xyz
+      tech:
+        frontend: React, Tailwind CSS
+        backend: Firebase Realtime Database
+        authentication: Firebase Auth (Google Sign-In)
+        hosting: Firebase Hosting
+      features:
+        - Google Sign-In authentication
+        - Real-time task management (add / edit / delete instantly)
+        - Dark mode support
+        - Progress tracking
+        - PWA support
+      reason:
+        - Learn React while strengthening JavaScript concepts
+        - Started with a short tutorial from Javascript Mastery then extended independently
+        - Still basically a todo app — and that's fine.
+      challenges:
+        - Understanding React hooks like useState & useEffect initially
+        - Handling Firebase realtime sync + authentication simultaneously
+  July:
+    - title: HeimOS
+      backstory:
+  Jun:
+    - title: Thoughtscape
+      timeline: Jun 2023 – July 2023
+      status: Archived
+      desc: A private online journaling web application with AI replies, VR lounge, chatbox, and secure synced journaling.
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/thoughtscape
+        - label: Demo
+          url: https://thoughtscape.samay15jan.xyz
+      tech:
+        Frontend: HTML, CSS, JavaScript, Tailwind CSS, IndexedDB (idb)
+        AI: Cloudflare AI Workers
+        Firebase: Hosting, Authentication, Firestore (secure storage), Realtime DB (non-sensitive)
+        VR: Matterport 360° + VR lounge
+        ChatBox: Cbox realtime chat
+        Email: Elastic Mail
+      features:
+        - Secure user authentication
+        - Private journal entry creation + cloud storage
+        - AI-generated responses to journal entries
+        - 360° VR lounge experience via Matterport
+        - Community chat via Cbox
+        - Book recommendations
+        - User settings + journal stats
+        - PWA offline support
+        - Help & support query system
+      reason:
+        - Wanted to learn full-stack web dev via real project work
+        - Inspired by AI hype and wanted AI features
+        - Personal motivation to start journaling with private cloud sync
+      challenges:
+        - Learning JavaScript fundamentals (used Javascript.info)
+        - Full Firebase workflow (auth + Firestore + Realtime DB)
+        - Implementing PWA offline support + IndexedDB
+        - Migrating AI from ChatGPT API to Cloudflare Workers
+        - Understanding project management & timelines
+        - Encryption tradeoffs — client-side encryption using Firebase UID wasn’t ideal; should have used backend/KMS but outside project scope
+  June:
+    - title: Browser Homepage
+      backstory:
+  May:
+    - title: ChatGPT Assistant
+      backstory:
+  April:  
+    - title: StorageBox
+      timeline: May 2023
+      status: Archived
+      desc: A free web application that allows users to store and share files permanently using Google Drive as backend storage, with shortened URLs for easy sharing.
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/Storage-Box
+        - label: Demo
+          url: https://storagebox.pythonanywhere.com
+      tech:
+        backend: Python (Flask)
+        frontend: HTML
+        storage: Google Drive API
+        auth: Google OAuth 2.0
+        hosting: PythonAnywhere
+        apis: ApiLayer (URL shortening)
+      features:
+        - Lifetime file storage with no expiration
+        - Upload support for all file types (up to 5MB per file)
+        - Automatic distribution of uploads across multiple shared Google Drive folders
+        - Secure access via Google authentication
+        - Shortened URLs for quick and convenient file sharing
+        - Privacy-focused design (files accessible only via shared links)
+      reason:
+        - Build a way to store any kind of data for free, indefinitely
+        - Experiment with unconventional use of cloud services for personal projects
+        - Pure curiosity and fun-driven exploration
+      challenges:
+        - Integrating Google Drive API with OAuth authentication
+        - Managing token expiration and re-authentication (token.pickle lifecycle)
+        - Handling multiple Drive folders and random file distribution
+        - Dealing with third-party API limits (ApiLayer)
+        - Deploying and maintaining the app on free hosting (PythonAnywhere)
+  March:
+    - title: Homepage
+      backstory:
 2022:
-  General:
-    - title: Home server setups & Docker
-    - title: Bash & i3wm customization
-    - title: Linux confidence
-      desc: Arch Linux became home
-    - title: Tough emotional year
-      desc: School + social chaos
-    - title: Mining
-    - title: Basic personal website
-    - title: CPU crypto mining experiments
+  Nov:
+    - title: First website
+      backstory: I was watching youtube and found this channel about mokuken. it had a new video about having minimal website. and i really loved the simplicity and the look and feel. So, i created the website (took alot of time), it was basic html, css and js. Uploaded it on github, and using added it on github. currently hosted on https://samay15jan.pages.dev
+  April:
+    - title: Linux intall script
+      backstory: Since i was using arch linux all the time on all my devices. But the problem was arch linux breaks alot...especially when i was breaking it every few weeks...twice. So, i created a simple arch install script with bash to automate everything (including base install and having a wm with i3wm and my configurations). Not knowingly i became a start of something big...HeimOS.
+  Jan:
+    - title: Mining Script
+      timeline: Jan 2022 – Feb 2022
+      status: Archived
+      desc: A simple Bash-based automation script for mining Monero (XMR) using CPU resources.
+      links:
+        - label: GitHub
+          url: https://github.com/samay15jan/mining
+      tech:
+        os: Arch Linux
+        scripting: Bash
+        tools: Shell utilities
+      features:
+        - Automated setup and execution of Monero CPU mining
+        - Scripted workflow to reduce manual steps
+        - Basic GitHub repository management and version control usage
+      reason:
+        - Start mining cryptocurrency on personal hardware as quickly as possible
+        - Explore GitHub for the first time and understand repository workflows
+        - Experiment with crypto mining concepts introduced via online resources
+      challenges:
+        - Limited hardware performance for CPU-based mining
+        - Understanding mining configurations and optimization
+        - Learning Bash scripting fundamentals alongside Git usage
 
 2021:
-  General:
-    - title: Deep Linux Customization
-      desc: Switched to Arch Linux
-    - title: Broke + Fixed System Many Times
-    - title: Bootable USB always ready
-    - title: Theming & GRUB fixing
-    - title: First Home Server Setup
+  Aug:
     - title: Self Hosting Tools
-      desc: Docker, PiHole, Jellyfin, Portainer, Yacht
+      backstory: I wanted to repurpose my old pc, it was potato pc still with 3gb ram and intel duo core processor with 160gb hdd. So, i installed arch linux (minimal version) on it. installed docker, installed yacht (for web ui, later switched to portainer), installed services like pihole, jellyfin, deluge, and alot alot more services. I loved breaking and rebuilding things to break again. Loved doing it. i even created a open case for my old pc and put it on my wall. What an amazing setup.
+  April:
+    - title: Arch Linux
+      backstory: I literally wanted my own linux distro at this point from scratch. I was disto Hopping and found out about Arch Linux. I watch a youtube video to do minimal base intall, but then i was unsure...where is the UI ? And from there i started reading more of arch wiki (Literally i started using documentation for everything after this). I stick to gnome first...slowly i started finding it bloat...i explored i3wm (perfect for me while being a curse too). Got into ricing (from r/UnixPorn) and its never ended from theming, grub fixing, breaking systems, rebuilding it from scratch (liteally had a bootable arch usb ready for this). And i explored arch linux...distro hopping made zero sense to me, i got very comfortable with cli, Learned alot and still learning.
 
 2020:
-  General:
-    - title: Bought laptop
-      desc: March 2020
-    - title: Amahi Server
-      desc: June–July
-    - title: Dual booting journey
-      desc: PopOS, Linux Mint, distro hopping
-    - title: Inspired by NetworkChuck
-    - title: Hackintosh attempt
-      desc: Late 2020 winters
-    - title: Learned terminal + TUIs
+  Nov:
+    - title: Explored Hackintosh 
+      backstory: Since i liked MacOS look and feel. i wanted it on my laptop, found out about hackintosh, i had like hundreds of failures both on my laptop and my old PC. I almost got it working on old PC (it was MacOS Mojave...But with a reboot it crashed). I even explored virtual machines (with tools like vmware, virtual box and qemu) just to have macos running on my device (It was hardware limitations...mostly). 
+  Oct:
+    - title: Getting into terminal
+      backstory: I found out popOS! worked well on my systems (daily driving linux), i had it both on my laptop and windows (while having dual booting system). Used to focus on customizations the UI alot (Mostly was to make it look like MacOS), which forced me to use terminal to install something or another. Got comfy with CLI/TUI more than GUI...and never looked back.
+  July:
+    - title: Introduction to Linux
+      backstory: I wanted more control on my old PC, i started looking for other operating systems and from there i found out about Linux, installed ubuntu, tried popOS!, Linux Mint and it eventually led me to do distro-hopping. Crazy journey, i learned alot about linux. I used to judge distros based on their look and feel. Fun times TBH. 
+  June:  
+    - title: Amahi Home Server
+      backstory: Got new laptop, and wanted to repurpose my old PC. Installed Amahi Home Server (which was complicated to setup at first but i got it working after several tries), enabled and configured wake on lan, and it was amazing setup. This was my beginning of selfhosting.
 
 Before 2020:
-  General:
+  unordered:
+    - title: Hardware Inspection
+      backstory: Opened up my old computer because i wanted to see the hardware inside it. Removed everything out, and rebuild it again after cleaning everything well, and it worked fine.
     - title: Rainmeter Customization
+      backstory: Inspired to convert windows into jarvis like system, lots of tinkering with rainmeter to have themes, deviantart was best for this at that time. It was beginning of my customization journey and best phase ever possible.
     - title: Windows tinkering
-    - title: Casual gaming
-    - title: Wakeup greeting batch script
-    - title: Random experiments
+      backstory: Exploring windows in depth (from reinstalling windows 7 from cdrom, updating to windows 8.1 and windows 10 (including creating bootable usb), exploring control panel in depth, and windows specific services just for fun).
+    - title: Wakeup greet script
+      backstory: Back in time, there used to be a wake up command, i used to copy it from internet, put it in windows text editor, and then save it as greet.bat file. It had something like echo and speech code. And when i run this file, it speaks the text i put in that file. And i had it auto start on login of device. Felt like Jarvis from Iron Man.
